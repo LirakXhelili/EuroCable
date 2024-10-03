@@ -1,0 +1,278 @@
+body {
+  background: linear-gradient(
+    to right,
+    #1e3c72,
+    #2a5298
+  ); /* Gradient background */
+  height: 100vh; /* Full height to ensure proper positioning */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Aligning the white box towards the top */
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items towards the top */
+  margin-top: 50px; /* Space from the top (adjust as needed) */
+  width: 100%;
+}
+
+.child-container {
+  background-color: white;
+  padding: 20px;
+  max-width: 80%;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Adds subtle shadow for effect */
+  text-align: center;
+}
+
+/* Headings and buttons */
+.parent-container h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.parent-container .div-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.parent-container .div-btn button {
+  margin: 0 10px;
+  background-color: black;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.parent-container .div-btn button:hover {
+  background-color: white;
+  color: black;
+  border: black solid 1px;
+}
+
+/* Table container and styling */
+.container {
+  display: block;
+  align-items: center;
+  margin-top: 0;
+  padding: 0;
+  height: auto;
+}
+
+/* Table styles */
+table {
+  width: 30%;
+  margin: 15px auto;
+  background-color: rgb(158, 158, 158);
+  padding: 10px;
+  border-radius: 15px;
+  max-width: 100%;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+}
+
+th {
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+td {
+  border-radius: 5px;
+}
+
+#tableJobs #index td {
+  color: white;
+  background-color: black;
+}
+
+#tableDeadlines tr,
+#tableSlots th {
+  border-radius: 8px;
+  border: none;
+}
+
+/* Button styling for adding jobs */
+.round-button {
+  margin: 0 5px;
+  margin-top: 10px;
+  background-color: black;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.round-button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+/* Modal popup styling */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup .modal .close {
+  padding: 2px 8px;
+  font-size: x-large;
+}
+
+.popup .modal .close:hover {
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal {
+  width: 20%;
+  background: white;
+  padding: 60px 60px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.popup .modal .labels {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup .modal .labels input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 0.8px solid black;
+}
+
+.popup .modal button {
+  margin: 8px 5px;
+  background-color: black;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.popup .modal button:hover {
+  background-color: rgb(125, 123, 123);
+  color: white;
+}
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 830px) {
+  .child-container {
+    max-width: 80%;
+  }
+
+  table {
+    font-size: 12px;
+    width: 80%;
+  }
+
+  .parent-container .div-btn {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .parent-container .div-btn button {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 717px) {
+  .parent-container .div-btn {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .parent-container .div-btn button {
+    margin-bottom: 5px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .parent-container .div-btn {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .parent-container .div-btn button {
+    margin-bottom: 5px;
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container .popup .modal button {
+    font-size: 12px;
+  }
+
+  .container .popup .modal {
+    font-size: 12px;
+    max-width: 30%;
+  }
+
+  .container .popup .modal .labels input {
+    padding: 4px;
+  }
+}
+
+@media (max-width: 550px) {
+  .container .popup .modal button {
+    font-size: 10px;
+  }
+
+  .container .popup .modal {
+    font-size: 12px;
+    max-width: 40%;
+  }
+}
